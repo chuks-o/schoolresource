@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title><%= title %></title>
+
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<link rel="stylesheet" href="/stylesheets/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css">
+	</head>
+	<body>
+		<% include layouts/topnav.ejs %>
+		<% include layouts/nav.ejs %>
+
+		<div class="container">
+			<div class="col-md-8 col-md-offset-2">
+				<h3 class="text-center"><%= title %></h3>
+
+						<div class="table-responsive">
+							<table class="table table-stripped">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Student Name</th>
+										<th>School</th>
+										<th>Image</th>
+										<th>Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<% studentdata.forEach(function(item) { %>
+									<tr>
+										<td>
+										 #
+										</td>
+										<td><%= item.studentname%></td>
+										<td><%= item.school%></td>
+										<td><%= item.email%></td>
+										<td><%= item.age%></td>
+									</tr>
+									<% }) %>
+								</tbody>
+							</table>
+						</div>
+
+			</div>
+
+		</div>
+
+
+
+
+	  <script type="text/javascript" src="/stylesheets/bootstrap/jquery-2.2.3.min.js"></script>
+	  <script type="text/javascript" src="/stylesheets/bootstrap/js/bootstrap.min.js"></script>
+	</body>
+</html>

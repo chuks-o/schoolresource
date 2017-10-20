@@ -1,0 +1,58 @@
+body{
+  font-size: 16px;
+}
+
+.nav {
+   background-color: white;
+}
+
+.navbar {
+	border-bottom: 2px solid #ccc;
+
+}
+.navbar-header .navbar-brand {
+   font-weight: bold;
+   font-size: 1.5em;
+}
+
+.jumbotron {
+  background-color: #ccc;
+  height: 320px;
+  margin-top: -20px;
+  padding: 20px;
+  margin-bottom: 0px;
+}
+
+.jumbotron h1{
+  margin-top: 60px;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.jumbotron small{
+  font-size: 20px;
+  color:red;
+}
+
+.sectionB {
+  height: 100%;
+  background-color: #001;
+  padding: 70px;
+  color: white;
+}
+.sectionB h2 {
+  font-weight: bold;
+  font-size: 40px;
+}
+.sectionB .panel {
+  background-color: transparent;
+}
+
+.sectionB .col-md-4 h4{
+  letter-spacing: 0.15em;
+  line-height: 2em;
+}
+
+.sectionB .fa{
+  margin-bottom: 50px;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Studentresource",
+  "version": "1.0.0",
+  "description": "An Andela Node project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "andela"
+  ],
+  "author": "Okpala Chuks",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cloudinary": "^1.9.0",
+    "connect": "^3.6.5",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33",
+    "mongoose": "^4.12.3"
+  }
+}
