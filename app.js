@@ -21,7 +21,7 @@ var studentSchema = new mongoose.Schema({
 
 var StudentModel = mongoose.model('studentData', studentSchema);
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
