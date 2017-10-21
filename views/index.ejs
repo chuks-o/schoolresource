@@ -2,7 +2,7 @@
 <html>
   <head>
     <title><%= title %></title>
-	 <meta name="viewport" content="width=320">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
 	 <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="/stylesheets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css">
@@ -15,7 +15,9 @@
 
 		  <div class="jumbotron">
 			  <h1>
-				  <%= title %>
+					  <img src="/images/andela-logo.png" alt="">
+					  <%= title %>
+
 			  </h1>
 			  <p><i>
 				  Welcome to <%= name %>
@@ -25,9 +27,8 @@
 		  </div>
 
 		  <section class="the-best-header">
-			  <!-- <img src="/images/line.png" alt=""> -->
 			  <h2 class="text-center">What we do...</h2>
-		  </section><br><br>
+		  </section><br>
 		  <section class="the-best">
 			  <div class="container">
 				  <div class="row">
@@ -38,9 +39,7 @@
 								<div class="caption">
 									<h3>Thumbnail label</h3>
 									<p>...</p>
-									<p>
-										<a href="#" class="btn btn-primary">Button</a>
-									</p>
+
 								</div>
 
 					  		</div>
@@ -52,9 +51,7 @@
 								<div class="caption">
 									<h3>Thumbnail label</h3>
 									<p>...</p>
-									<p>
-										<a href="#" class="btn btn-primary">Button</a>
-									</p>
+
 								</div>
 					  		</div>
 					  </div>
@@ -65,12 +62,8 @@
 								<div class="caption">
 									<h3>Thumbnail label</h3>
 									<p>...</p>
-									<p>
-										<a href="#" class="btn btn-primary">Button</a>
-									</p>
 
 								</div>
-
 					  		</div>
 					  </div>
 
@@ -78,11 +71,45 @@
 
 			  </div>
 		  </section>
+
+		  <section class="contact-us">
+			  <div class="container">
+				  <div class="row">
+					  <h2 class="text-center">Contact Us</h2>
+					  <div class="col-md-4 font-message text-center">
+						  <span class="fa fa-envelope-o fa-lg"></span>
+
+					  </div>
+					  <div class="col-md-5">
+						  <form class="" action="index.html" method="post">
+							  <div class="form-group">
+								  <label for="">Name</label>
+								  <input type="text" class="form-control input-lg" name="" value="">
+
+							  </div>
+							  <div class="form-group">
+								  <label for="">Email</label>
+								  <input type="email" class="form-control input-lg" name="" value="">
+
+							  </div>
+							  <div class="form-group">
+								  <label for="">Message</label>
+								  <textarea name="name" class="form-control" rows="8" cols="80"></textarea>
+
+							  </div>
+							  <button type="button" class="btn btn-primary btn-block btn-lg" name="button">Send Message</button>
+						  </form>
+
+					  </div>
+
+				  </div>
+
+			  </div>
+
+		  </section>
 	  </div>
 
-	  <!-- <div class="footer">
-		  <p><span>Copyright </span></p>
-	  </div> -->
+	  <% include layouts/footer.ejs %>
 
 	  <script type="text/javascript" src="/stylesheets/bootstrap/jquery-2.2.3.min.js"></script>
 	  <script type="text/javascript" src="/stylesheets/bootstrap/js/bootstrap.min.js"></script>
