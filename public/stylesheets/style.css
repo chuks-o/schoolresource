@@ -39,28 +39,22 @@ body {
 }
 
 .navbar-brand {
-	color:#000080 !important;
+	color:#000d1a !important;
 	font-weight: bold;
 	font-size: 20px !important;
-}
-
-.font-message {
-	font-size:250px;
-	color:#000d1a !important;
-	/*margin-left: 70px;*/
 }
 
 .jumbotron img {
 	height:60px;
 	width: 60px;
 }
-.navbar-brand a:hover {
-	color:#000080;
+a:hover {
+	color:#000080 !important;
 	text-decoration: none;
 }
 
 .navbar-nav li a {
-	color:#000080 !important;
+	color:#000d1a !important;
 	font-weight: bold;
 }
 
@@ -84,6 +78,7 @@ body {
 	margin-top: 0px;
 	padding: 20px;
 	background-color: #f8f8f9;
+	border-bottom: 1px solid #ccc;
 }
 .the-best-header {
 	margin-top: 0px;
@@ -107,6 +102,12 @@ body {
 	padding: 10px;
 }
 
+.font-message {
+	font-size:230px;
+	color:#000d1a !important;
+	/*margin-left: 70px;*/
+}
+
 .contact-us {
 	margin-top: 0px;
 	padding: 20px;
@@ -117,6 +118,11 @@ body {
 	background-color: #000d1a;
 	padding: 30px;
 	color:#fff;
+}
+
+.navbar-toggle {
+	background-color: #000d1a !important;
+	border-radius: 0px !important;
 }
 .footer p {
 	line-height: inherit;
