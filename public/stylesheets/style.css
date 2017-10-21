@@ -44,6 +44,10 @@ body {
 	font-size: 20px !important;
 }
 
+.navbar-brand a:hover{
+	text-decoration: none;
+}
+
 .jumbotron img {
 	height:60px;
 	width: 60px;
@@ -54,7 +58,7 @@ a:hover {
 }
 
 .navbar-nav li a {
-	color:#000d1a !important;
+	color:#337ab7 !important;
 	font-weight: bold;
 }
 
@@ -121,7 +125,6 @@ a:hover {
 }
 
 .navbar-toggle {
-	background-color: #000d1a !important;
 	border-radius: 0px !important;
 }
 .footer p {
