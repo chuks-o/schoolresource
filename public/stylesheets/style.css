@@ -3,11 +3,11 @@ body {
 }
 
 .mynav{
-  background-color: #f8f8f9 !important;
+  background-color: white !important;
   margin-bottom: 0px !important;
   border-radius: 0px !important;
-  /*border-bottom: 2px solid #000d1a !important;*/
-   box-shadow: 0px 5px 5px  #ccc;
+  border-bottom: 2px solid #f8f8f9 !important;
+   box-shadow: 0px 5px 5px  #f8f8f9;
 }
 
 .topnav{
@@ -27,7 +27,7 @@ body {
 
 .jumbotron {
 	padding-top:25px !important;
-	height: 280px;
+	height: 250px;
 	background: rgb(55, 63, 70); /* For browsers that do not support gradients */
 	background: -webkit-linear-gradient(left, rgb(55, 63, 70), #ccddff); /* For Safari 5.1 to 6.0 */
 	background: -o-linear-gradient(right, rgb(55, 63, 70), #ccddff); /* For Opera 11.1 to 12.0 */
@@ -38,8 +38,8 @@ body {
 	border-radius: 0px !important;
 }
 
-.navbar-brand {
-	color:#000d1a !important;
+.navbar-brand a{
+	color:#3359df !important;
 	font-weight: bold;
 	font-size: 20px !important;
 }
@@ -58,7 +58,7 @@ a:hover {
 }
 
 .navbar-nav li a {
-	color:#337ab7 !important;
+	color:#3359df !important;
 	font-weight: bold;
 }
 
@@ -73,9 +73,9 @@ a:hover {
 
 .btnjump {
 	margin-top: 15px;
-	border-radius: 0px !important;
+	border-radius: 15px !important;
 	font-weight: bold !important;
-	color: #000d1a !important;
+	color: #3359df !important;
 }
 
 .the-best {
@@ -92,7 +92,7 @@ a:hover {
 }
 .the-best-header h2 {
 	font-weight: bold;
-	font-size: 35px;
+	font-size: 25px;
 }
 
 .thumbnail {
@@ -107,7 +107,7 @@ a:hover {
 }
 
 .font-message {
-	font-size:230px;
+	font-size:80px;
 	color:#000d1a !important;
 	/*margin-left: 70px;*/
 }
@@ -124,13 +124,38 @@ a:hover {
 	color:#fff;
 }
 
-.navbar-toggle {
+.navbar-toggle  {
 	border-radius: 0px !important;
+	border: none !important;
+	background: white !important;
 }
+
+.icon-bar {
+	background: #3359df !important;
+}
+
 .footer p {
 	line-height: inherit;
+	font-family: Open Sans, sans-serif;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: none;
+    color: #949494;
 }
 .btn-primary {
 	background:#000d1a !important;
+	border-radius: 20px !important;
+	border-color: #000d1a !important;
+}
+
+.form-control {
+	border-top: 0px !important;
 	border-radius: 0px !important;
+	box-shadow: none !important;
+	border-left:  0px !important;
+	border-right:  0px !important;
+	/*border: 0px 0px 1px 0px !important*/
 }

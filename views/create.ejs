@@ -17,7 +17,7 @@
 			<br>
 			<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
 				<h3 class="text-center"><br>
-					<strong> <span class="fa fa-book"></span> Create Resource</strong>
+					<strong> <span class="fa fa-pencil-square-o"></span> Create Resource</strong>
 				</h3><br>
 				<div class="panel panel-default">
 					<div class="panel-heading">
@@ -25,34 +25,38 @@
 					</div>
 					<div class="panel-body">
 						<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-							<form role="form" action="/create" method="post">
+							<form role="form" action="/create" enctype="multipart/form-data" method="post">
+								<div class="form-group">
+									<label for="Name">Resource image</label>
+									<input type="file" class="" name="myimage">
+								</div><br>
+
 								<div class="form-group">
 									<label for="Name">Student Name</label>
-									<input type="text" class="form-control" name="studentname" value="">
+									<input type="text" class="form-control input-lg" placeholder="John Doe" name="studentname" value="">
 								</div>
 
 								<div class="form-group">
 									<label for="Name">School</label>
-									<input type="text" class="form-control" name="school" value="">
+									<input type="text" class="form-control input-lg" placeholder="Andela Schools" name="school" value="">
 								</div>
 
 								<div class="form-group">
 									<label for="Name">Email</label>
-									<input type="text" class="form-control" name="email" value="">
+									<input type="text" class="form-control input-lg" placeholder="johndoe@hotmail.com" name="email" value="">
 								</div>
 
 								<div class="form-group">
 									<label for="Name">Age</label>
-									<input type="text" class="form-control" name="age" value="">
-								</div>
+									<input type="text" class="form-control input-lg" placeholder="21" name="age" value="">
+								</div><br>
 
-								<button type="submit" class="btn btn-primary" >Submit</button>
+								<button type="submit" class="btn btn-primary btn-block btn-lg" >Submit</button>
 
-							</form>	<br><br>
+							</form>	<br>
 						</div>
 					</div>
-
-				</div>
+				</div><br><br>
 			</div>
 
 		</div>

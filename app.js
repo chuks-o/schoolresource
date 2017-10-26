@@ -2,7 +2,9 @@ var http = require('http');
 var express = require ('express');
 var path = require('path');
 var bodyParser = require('body-parser');
-var cloudinary = require('cloudinary');
+// var cloudinary = require('cloudinary');
+var multer  = require('multer')
+var upload = multer({ dest: 'uploads/' })
 var app = express();
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var mongoose = require('mongoose');
@@ -16,12 +18,11 @@ var studentSchema = new mongoose.Schema({
 	studentname: {type: String, required: true},
 	school: {type: String, required: true},
 	email:  {type: String, required: true},
-	age: {type: Number, required: true}
+	age: {type: Number, required: true},
+	myimage: {type: String, required: true}
 });
 
 var StudentModel = mongoose.model('studentData', studentSchema);
-
-app.listen(process.env.PORT || 3000);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -54,18 +55,20 @@ app.get('/list', function(req, res, next) {
 
 });
 
-app.post('/create', urlencodedParser, function(req, res) {
+app.post('/create', upload.single('myimage'), urlencodedParser, function(req, res) {
 	// Get the Student request
 	var item = {
 		studentname: req.body.studentname,
 		school: req.body.school,
 		email: req.body.email,
-		age: req.body.age
+		age: req.body.age,
+		image: req.file.myimage
 	};
-
 	// Insert Student data into the database
 	var data = new StudentModel(item).save(function(err, data) {
 		if (err) throw err;
 		res.redirect('list');
 	});
 });
+
+app.listen(process.env.PORT || 3000);
