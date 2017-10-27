@@ -19,7 +19,6 @@ var studentSchema = new mongoose.Schema({
 	school: {type: String, required: true},
 	email:  {type: String, required: true},
 	age: {type: Number, required: true},
-	myimage: {type: String, required: true}
 });
 
 var StudentModel = mongoose.model('studentData', studentSchema);
@@ -62,7 +61,6 @@ app.post('/create', upload.single('myimage'), urlencodedParser, function(req, re
 		school: req.body.school,
 		email: req.body.email,
 		age: req.body.age,
-		image: req.file.myimage
 	};
 	// Insert Student data into the database
 	var data = new StudentModel(item).save(function(err, data) {
