@@ -102,7 +102,7 @@ a:hover {
 }
 .footer {
 	background-color: #000d1a;
-	padding: 30px;
+	padding: 20px;
 	color:#fff;
 }
 
@@ -120,7 +120,7 @@ a:hover {
 .footer p, a {
 	 font-family: Open Sans, sans-serif;
     line-height: 23px;
-    letter-spacing: 0.07em;
+    letter-spacing: 0.05em;
     text-transform: none;
     color: #949494 !important;
 }
@@ -162,4 +162,9 @@ a:hover {
  }
 .thumbnail p {
 	font-size: 16px !important;
+}
+
+.list-well {
+	font-size: 16px !important;
+	border-top-right-radius: 30px !important;
 }

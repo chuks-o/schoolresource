@@ -17,35 +17,35 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						 <span class="fa fa-pencil-square-o"></span>
-						Create Student Resource
+						Update Resource
 					</div>
 					<div class="panel-body">
 						<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-							<form role="form" action="/create" method="post">
+							<form role="form" action="/update/<%= studentdata._id %>" method="post">
+
 								<div class="form-group">
 									<label for="Name">Student Name</label>
-									<input type="text" class="form-control input-lg" placeholder="John Doe" name="studentname" required>
+									<input type="text" class="form-control input-lg" placeholder="John Doe" name="studentname" value="<%= studentdata.studentname%>" required>
 								</div>
 
 								<div class="form-group">
 									<label for="Name">School</label>
-									<input type="text" class="form-control input-lg" placeholder="Andela Schools" name="school" required>
+									<input type="text" class="form-control input-lg" placeholder="Andela Schools" name="school" value="<%= studentdata.school%>" required>
 								</div>
 
 								<div class="form-group">
 									<label for="Name">Email</label>
-									<input type="text" class="form-control input-lg" placeholder="johndoe@hotmail.com" name="email" required>
+									<input type="text" class="form-control input-lg" placeholder="johndoe@hotmail.com" name="email" value="<%= studentdata.email%>" required>
 								</div>
 
 								<div class="form-group">
 									<label for="Name">Age</label>
-									<input type="number" class="form-control input-lg" placeholder="21" name="age" required>
+									<input type="number" class="form-control input-lg" placeholder="21" name="age" required="required" value=<%= studentdata.age%> >
 								</div><br>
 
 								<div class="text-center">
 									<button type="submit" class="btn btn-default sub-btn btn-lg">
-										Submit
-										<span class="fa fa-check-circle-o "></span>
+										Update
 								</div>
 
 								</button>
@@ -53,9 +53,7 @@
 							</form><br>
 						</div>
 					</div>
-					<!-- <div class="panel-footer">
-						Footer
-					</div> -->
+
 				</div><br><br>
 			</div>
 

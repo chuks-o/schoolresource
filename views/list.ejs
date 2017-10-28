@@ -5,44 +5,43 @@
 		<% include layouts/header.ejs %>
 	</head>
 	<body>
-		<% include layouts/topnav.ejs %>
-		<% include layouts/nav.ejs %><br>
+		<% include layouts/nav.ejs %><br><br><br>
 
-		<div class="container">
-			<div class="col-md-8 col-md-offset-2">
-				<h3 class="text-center"><%= title %></h3><br><br>
+		<div class="container-fluid">
+			<div class="col-md-12">
+				<!-- <div class="alert alert-success">
+					<h4 class="text-center">
+					</h4>
+				</div> -->
+				<h3 class="text-center"><strong>Student <%= title %></strong></h3><br>
+				<div class="row">
+					<% studentdata.forEach(function(item) {%>
+						<div class="col-md-4">
+							<div class="well list-well">
+								<p>Name: <%= item.studentname %><br>
+									School: <%= item.school %><br>
+									Email: <%= item.email %><br>
+									Age: <%= item.age%><br>
+									<h4 class="text-center">
+										<a href="/show/<%= item._id %>">
+											<span class="fa fa-eye fa-2x"></span>
+										</a> &nbsp &nbsp &nbsp
+										<a href="/delete/<%= item._id %>">
+											<span class="fa fa-trash-o fa-2x"></span>
+										</a>
+									</h4>
+								</p>
 
-						<div class="table-responsive">
-							<table class="table table-hover">
-								<thead>
-									<tr>
-										<th>#</th>
-										<th>Student Name</th>
-										<th>School</th>
-										<th>Email</th>
-										<th>Age</th>
-									</tr>
-								</thead>
-								<tbody>
-									<% studentdata.forEach(function(item) { %>
-									<tr>
-										<td>
-										 #
-										</td>
-										<td><%= item.studentname%></td>
-										<td><%= item.school%></td>
-										<td><%= item.email%></td>
-										<td><%= item.age%></td>
-									</tr>
-									<% }) %>
-								</tbody>
-							</table>
+							</div>
 						</div>
+						<% }) %>
+
+				</div>
 			</div>
 
-		</div>
+		</div><br><br>
 
-
+		<% include layouts/footer.ejs %>
 
 
 	  <script type="text/javascript" src="/stylesheets/bootstrap/jquery-2.2.3.min.js"></script>

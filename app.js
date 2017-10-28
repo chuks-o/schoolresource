@@ -3,8 +3,8 @@ var express = require ('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 // var cloudinary = require('cloudinary');
-var multer  = require('multer')
-var upload = multer({ dest: 'uploads/' })
+// var multer  = require('multer')
+// var upload = multer({ dest: 'uploads/' })
 var app = express();
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var mongoose = require('mongoose');
@@ -54,7 +54,7 @@ app.get('/list', function(req, res, next) {
 
 });
 
-app.post('/create', upload.single('myimage'), urlencodedParser, function(req, res) {
+app.post('/create', urlencodedParser, function(req, res) {
 	// Get the Student request
 	var item = {
 		studentname: req.body.studentname,
@@ -67,6 +67,39 @@ app.post('/create', upload.single('myimage'), urlencodedParser, function(req, re
 		if (err) throw err;
 		res.redirect('list');
 	});
+});
+
+
+app.get('/show/:id', function(req, res) {
+	var id = req.params.id;
+	StudentModel.findOne({_id: id}, function(err, data) {
+		if (err) throw err;
+		res.render('show', { studentdata: data });
+	});
+});
+
+app.post('/update/:id', urlencodedParser, function(req, res) {
+	var id = req.params.id;
+	StudentModel.findOne({_id: id}, function(err, data) {
+		if (err) throw err;
+		data.studentname = req.body.studentname,
+		data.school = req.body.school,
+		data.email = req.body.email,
+		data.age = req.body.age
+
+		data.save(function(err, data) {
+			if (err) throw err;
+			res.redirect('/list');
+		});
+
+	});
+});
+
+app.get('/delete/:id', function(req, res) {
+	StudentModel.remove({_id: req.params.id }, function(err, data) {
+		if (err) throw err;
+		res.redirect('/list');
+	 });
 });
 
 app.listen(process.env.PORT || 3000);
