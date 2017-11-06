@@ -91,7 +91,6 @@ app.post('/update/:id', urlencodedParser, function(req, res) {
 			if (err) throw err;
 			res.redirect('/list');
 		});
-
 	});
 });
 
